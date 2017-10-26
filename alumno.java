@@ -1,5 +1,3 @@
-package institucioneducativa;
-
 import java.io.*;
 import java.util.Date;
 import java.util.Calendar;
@@ -10,52 +8,31 @@ public class alumno {
     int matricula, creditos, anioIngreso, anioEgreso,anioDeNacimiento, materiasCursadas;
     double promedio, sumaCalificaciones;
 
-//CONSTRUCTOR
+//CONSTRUCTOR RECIBE ARCHIVO DE TEXTO
     alumno(){
-        numeroAlumnos++;
-        this.matricula=generaMatricula();
-        this.creditos=0;
-        this.promedio=0;
-        this.materiasCursadas=0;
-        this.sumaCalificaciones=0;//AQUI SUMO LAS CALIFICACIONES DE LAS MATERIAS CURSADAS
+
     }
-//CONSTRUCTOR
-    alumno(String nombre, int anioDeNacimiento){
-        numeroAlumnos++;
-        this.matricula=generaMatricula();
-        this.creditos=0;
-        this.promedio=0;
-        this.nombre=nombre;
-        this.materiasCursadas=0;
-        this.anioDeNacimiento=anioDeNacimiento;
-        this.sumaCalificaciones=0;//AQUI SUMO LAS CALIFICACIONES DE LAS MATERIAS CURSADAS
+    alumno(String linea){
+      String Temporal[]=linea.split(",");
+      this.nombre=Temporal[1];
+      this.anioIngreso=Integer.parseInt(Temporal[2]);
+      this.anioEgreso=Integer.parseInt(Temporal[3]);
+      this.anioDeNacimiento=Integer.parseInt(Temporal[4]);
+      this.matricula=Integer.parseInt(Temporal[5]);
     }
+    public void Imprimir(){
+    System.out.println(this.nombre + this.anioIngreso + this.anioEgreso + this.anioDeNacimiento+this.matricula);
+    }
+
 //METODO PARA GENERAR MATRICULA
     private int generaMatricula(){
-
         return (int)(Math.random()*1000000);
-
     }
-//METODO PARA CAMBIAR NOMBRE
-    private void cambiarNombre(String nombre){
-        this.nombre=nombre;
-    }
-//METODO DAME-MATRICULA
-    public int dameMatricula(){
-        return this.matricula;
-    }
-    public double damePromedio(){
-        return this.sumaCalificaciones/this.materiasCursadas;
-    }
-    public int dameTotalAlumnos(){
-        return numeroAlumnos;
-    }
-
     public void importar(){
       File archivo = null;
       FileReader fr = null;
       BufferedReader br = null;
-      alumno[] arreglo=new alumno[37];
+      alumno[] arreglo=new alumno[36];
       try {
            archivo = new File ("personas.csv");
            fr = new FileReader (archivo);
@@ -80,7 +57,7 @@ public class alumno {
               e2.printStackTrace();
            }
         }
-        for(int i=0;i<37;i++){
+        for(int i=0;i<36;i++){
           arreglo[i].Imprimir();
         }
     }
