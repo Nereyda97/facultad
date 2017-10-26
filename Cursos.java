@@ -3,5 +3,6 @@ class Cursos{
  public calculadora(Alumno A){
    //Mensajito
  return Total;
+   //HOLA
  }
 }
