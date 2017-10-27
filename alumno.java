@@ -5,6 +5,7 @@ public class alumno {
     String nombre;
     int matricula, creditos, anioIngreso, anioEgreso,anioDeNacimiento, materiasCursadas;
     double promedio, sumaCalificaciones;
+    static alumno[] arreglo=new alumno[38];
 
 //CONSTRUCTOR RECIBE ARCHIVO DE TEXTO
     alumno(){
@@ -22,15 +23,15 @@ public class alumno {
     System.out.println(this.nombre + this.anioIngreso + this.anioEgreso + this.anioDeNacimiento+this.matricula);
     }
 
-//METODO PARA GENERAR MATRICULA
-    private int generaMatricula(){
-        return (int)(Math.random()*1000000);
-    }
-    public void importar(){
+//METODO PARA GENERAR MATRICULA comentado
+    //private int generaMatricula(){
+    //  return (int)(Math.random()*1000000);
+    //}
+    public void importar(String nombres){
       File archivo = null;
       FileReader fr = null;
       BufferedReader br = null;
-      alumno[] arreglo=new alumno[36];
+      
       try {
            archivo = new File ("personas.csv");
            fr = new FileReader (archivo);
@@ -39,10 +40,15 @@ public class alumno {
            String linea;
            int i=0;
            while((linea=br.readLine())!=null){
-
              arreglo[i]=new alumno(linea);
              i++;
            }
+           for(int j=0;j<37;j++){
+       		
+       		if(nombres.equals(arreglo[i].nombre)){
+       			System.out.println(nombre);
+       		}
+       	}
         }
         catch(Exception e){
            e.printStackTrace();
@@ -55,8 +61,8 @@ public class alumno {
               e2.printStackTrace();
            }
         }
-        for(int i=0;i<36;i++){
-          arreglo[i].Imprimir();
-        }
+        //for(int i=0;i<36;i++){
+          //arreglo[i].Imprimir();
+        //}
     }
 }//Fin de la clase
