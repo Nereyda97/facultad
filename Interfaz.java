@@ -15,7 +15,7 @@ class Interfaz{
       System.out.println("-------------------------");
       System.out.print(">>> ");
       respuesta=T.nextInt();
-      
+
       switch(respuesta){
       	case 1:
       		menuCrear();
@@ -36,11 +36,11 @@ class Interfaz{
       	default:
       		break;
       }
-    } 
+    }
   }
-  
+
 //MENU CREAR
-  
+
   static public void menuCrear(){
 	  Scanner T=new Scanner(System.in);
       int respuesta=0;
@@ -56,7 +56,7 @@ class Interfaz{
         System.out.println("-------------------------");
         System.out.print(">>> ");
         respuesta=T.nextInt();
-        
+
         switch(respuesta){
         	case 1:
         		System.out.println("1. Crear");
@@ -69,15 +69,15 @@ class Interfaz{
         	case 4:
         		System.out.println("3. Consultar");
         		break;
-        		
+
         	case 5:
         		System.out.println("3. Consultar");
         		break;
-        		
+
         	case 6:
         		System.out.println("3. Consultar");
         		break;
-        		
+
         	case 7:
         		opcion=false;
         		break;
@@ -87,9 +87,9 @@ class Interfaz{
         }
       }
   }
-  
+
 //MENU MODIFICAR
-  
+
   static public void menuModificar(){
 	  Scanner T=new Scanner(System.in);
       int respuesta=0;
@@ -106,7 +106,7 @@ class Interfaz{
         System.out.println("-------------------------");
         System.out.print(">>> ");
         respuesta=T.nextInt();
-        
+
         switch(respuesta){
         	case 1:
         		System.out.println("1. Crear");
@@ -119,15 +119,15 @@ class Interfaz{
         	case 4:
         		System.out.println("3. Consultar");
         		break;
-        		
+
         	case 5:
         		System.out.println("3. Consultar");
         		break;
-        		
+
         	case 6:
         		System.out.println("3. Consultar");
         		break;
-        		
+
         	case 7:
         		opcion=false;
         		break;
@@ -153,7 +153,7 @@ class Interfaz{
         System.out.println("-------------------------");
         System.out.print(">>> ");
         respuesta=T.nextInt();
-        
+
         switch(respuesta){
         	case 1:
         		menuConsultarNomFacu();
@@ -166,15 +166,15 @@ class Interfaz{
         	case 4:
         		menuConsultarAlumnos();
         		break;
-        		
+
         	case 5:
         		System.out.println("3. Consultar");
         		break;
-        		
+
         	case 6:
         		System.out.println("3. Consultar");
         		break;
-        		
+
         	case 7:
         		opcion=false;
         		break;
@@ -194,7 +194,7 @@ class Interfaz{
         System.out.println("-------------------------");
         System.out.print(">>> ");
         respuesta=T.nextInt();
-        
+
         switch(respuesta){
         	case 1:
         		opcion=false;
@@ -219,10 +219,13 @@ class Interfaz{
         //no me deja entrar al arreglo me da null
         switch(respuesta){
         	case 1:
-        		alumno A=new alumno();
+        		alumno A = new alumno();
         		System.out.print(">> ");
         		String nombre=S.nextLine();
-        		A.importar(nombre);
+        		A.importar("personas.csv");
+            A.imprimir();
+            A.buscar(nombre);
+
         		break;
 
         	default:
