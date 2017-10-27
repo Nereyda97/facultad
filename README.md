@@ -20,4 +20,8 @@ lidia le toca enlazar los menus en una sola clase
        -crear curso   
        -crear materias  
        
+       
+       Marlen Crear-Prepa-calificacionManualmente y calificacionesAleatorias y promedio
+      
+       
 *Falta de Escribir*
