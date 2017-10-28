@@ -32,7 +32,7 @@ public class Profesor {
       BufferedReader br = null;
 
       try {
-           archivo = new File (nombreArchivos);
+           archivo = new File ("Profesores.csv");
            fr = new FileReader (archivo);
            br = new BufferedReader(fr);
 
