@@ -458,12 +458,12 @@ public class metodosMenu {
 //METODO PARA CONSULTAR INFORMACION DE LOS MAESTROS YA PREDETERMINADOS
 		    public void consultarProfesores(){ 		      			    
 			   String[] Profesor = {"LUZ ELENA AREVALO","ROSA ELENA TORRES RUIZ","RUTH CALDERON VELAZQUEZ",			    
-					   "ESTHER GARCIA GARIBAY","RICARDO VEGA TAVERA", "KARLA LILIANA GARCIA CHAVEZ","RAMON ANTONIO MUÑOS LOPES", 			    
-					   "RODRIGO MERLOS ROJAS","SANDRA GUADALUPE SANCHEZ CEJA","SANDRA MARIA SUAREZ MORENO", "ALMA ROSA GARCIA RAMOS",			   
-					   "JUDIT ARACELI AVILA VERDUZCO","RICARDO VEGA TAVERA","KARLA LILIANA GARCIA CHAVEZ","OSCAR ANTONIO LOPES MUÑOS", 			    
-					   "RODRIGO MERLOS ROJAS","RICARDO VEGA TAVERA","KARLA LILIANA GARCIA CHAVEZ","RODRIGO MERLOS ROJAS","ROSA GARCIA MARTINEZ", 			    
-					   "MARTHA JOSEFINA DE LOS DOLORES TORRES","MARIO ARMANDO HURTADO","LUIS RAFAEL CHAVEZ GARIBAY","KARLA LILIANA GARCIA CHAVEZ" 
-			   }; 
+				   "ESTHER GARCIA GARIBAY","RICARDO VEGA TAVERA", "KARLA LILIANA GARCIA CHAVEZ","RAMON ANTONIO MUÑOS LOPES", 			    
+				   "RODRIGO MERLOS ROJAS","SANDRA GUADALUPE SANCHEZ CEJA","SANDRA MARIA SUAREZ MORENO", "ALMA ROSA GARCIA RAMOS",			   
+				   "JUDIT ARACELI AVILA VERDUZCO","RICARDO TORRES TAVERA","LILIANA GARCIA CHAVEZ","OSCAR ANTONIO LOPES MUÑOS", 			    
+				   "RICARDO MERELOS ROSAS","RAUL VEGA CERRANO","KARLA GARCIA HERNANDEZ","RODRIGO MARTINEZ ROJAS","ROSA GARCIA MARTINEZ", 			    
+				   "MARTHA JOSEFINA DE LOS DOLORES TORRES","MARIO ARMANDO HURTADO","LUIS RAFAEL CHAVEZ GARIBAY","KATIA LILIANA GARCIA CHAVEZ" 
+		   }; 
 			   int[] A = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24 }; 			    
 			   int[] B = {0,1,3,2,3,0,1,2,3,0,0,3,2,1,3,2,2,1,2,3,4,2,1,0}; 			    
 			   int[] C = {143244 , 134532, 123512, 986547, 125423, 875932, 698546, 985703, 763750, 865748, 163759, 985674, 654722,
@@ -471,20 +471,20 @@ public class metodosMenu {
 			   Scanner T = new Scanner(System.in);			    
 			   System.out.println("Ingrese el nombre del profesor(a):  ");
 			   String x = T.nextLine();
-			   x=x.toLowerCase();
+			   x=x.toUpperCase();
 			   String cero="Computacion";
 			   String uno="Matematicas";
 			   String dos="Fisica";
 			   String tres="Otro";
-			   for( int i=0; i<=24; i++){ 
-				   if ( x.equals(Profesor[i])&&B[i]==0){
-					   System.out.println("EL nombre es " + Profesor[i] + "\n " + "Numero de Profesor: "+ A[i] + "\n" + "En area de "+cero + "\n" + "Numero de Empleado: " + C[i]);   
-				   }else if ( x.equals(Profesor[i])&&B[i]==1){
-					   System.out.println("EL nombre es " + Profesor[i] + "\n " + "Numero de Profesor: "+ A[i] + "\n" + "En area de "+uno+ "\n" + "Numero de Empleado: " + C[i]);   
-				   }else if ( x.equals(Profesor[i])&&B[i]==2){
-					   System.out.println("EL nombre es " + Profesor[i] + "\n " + "Numero de Profesor: "+ A[i] + "\n" + "En area de "+dos + "\n" + "Numero de Empleado: " + C[i]);   
-				   }else if ( x.equals(Profesor[i])&&B[i]==3){
-					   System.out.println("EL nombre es " + Profesor[i] + "\n " + "Numero de Profesor: "+ A[i] + "\n" + "En area de "+tres + "\n" + "Numero de Empleado: " + C[i]);   
+			   for( int i=0; i<24; i++){ 
+				   if ( x.equals(Profesor[i])&& B[i]==0){
+					   System.out.println(" EL nombre es " + Profesor[i] + "\n " + "Numero de Profesor: "+ A[i] + "\n " + "En area de "+cero + "\n " + "Numero de Empleado: " + C[i]);   
+				   }else if ( x.equals(Profesor[i])&& B[i]==1){
+					   System.out.println(" EL nombre es " + Profesor[i] + "\n " + "Numero de Profesor: "+ A[i] + "\n " + "En area de "+uno+ "\n " + "Numero de Empleado: " + C[i]);   
+				   }else if ( x.equals(Profesor[i])&& B[i]==2){
+					   System.out.println(" EL nombre es " + Profesor[i] + "\n " + "Numero de Profesor: "+ A[i] + "\n " + "En area de "+dos + "\n " + "Numero de Empleado: " + C[i]);   
+				   }else if ( x.equals(Profesor[i])&& B[i]==3){
+					   System.out.println(" EL nombre es " + Profesor[i] + "\n " + "Numero de Profesor: "+ A[i] + "\n " + "En area de "+tres + "\n  " + "Numero de Empleado: " + C[i]);   
 				   }
 			   }
 		   }
