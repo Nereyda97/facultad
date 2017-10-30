@@ -553,7 +553,8 @@ public class Menu {
 						
 						break;
 					case 7:
-						A.promeFacuMenu2();
+						int promedioFac=A.promeFacuMenu2();
+						System.out.println("El promedio es: "+promedioFac);
 						break;
 					case 8:
 						opcionMenuConsultar2=false;
@@ -642,7 +643,7 @@ public class Menu {
 				T.nextLine();
 				switch(respuesta){
 					case 1:
-						A.consultarAlumnos();
+						A.consultarMateria();
 						break;
 					case 2:
 						consultarMaterias=false;

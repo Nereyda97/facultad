@@ -560,8 +560,6 @@ public class metodosMenu {
 			   int[] caliCursoPorAlum;
 			   int[]  promedios=new int[10];
 			   int suma=0;
-			   
-			   String x = T.nextLine();
 			   for( int i=0; i<10; i++){
 				   int valor1=alumCurso[i];
 				   caliCursoPorAlum=new int[valor1];
