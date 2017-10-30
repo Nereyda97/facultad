@@ -748,7 +748,7 @@ public class Menu {
 		        }
 			}
 		}
-//MENU PARA INGRESAR EL NUMERO DE PROFESORES
+//MENU PARA INGRESAR EL NUMERO DE  PROFESORES
 		static public void numProfesor(){
 			int respuesta=0;
 			while(numProfesor){
